@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Be My Valentine 💖</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #fff0f3, #ffe5ec);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      animation: floatIn 1.2s ease;
+    }
+
+    @keyframes floatIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      color: #c9184a;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    p {
+      color: #6d6875;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    .no {
+      background: #dee2e6;
+      color: #495057;
+    }
+
+    .message {
+      margin-top: 1.5rem;
+      font-size: 1.3rem;
+      color: #c9184a;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="Valentines.png" alt="Valentine's Day Proposal" />
+    <h1>Happy Valentine’s Day 💕</h1>
+    <p>I have something really important to ask you…</p>
+
+    <div class="buttons">
+      <button class="yes" onclick="sayYes()">Yes 💖</button>
+      <button class="no" onclick="sayNo()">No 🙈</button>
+    </div>
+
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    function sayYes() {
+      const msg = document.getElementById('message');
+      msg.style.display = 'block';
+      msg.textContent = "Yay!! You just made me the happiest person ever 💘🥰";
+    }
+
+    function sayNo() {
+      const msg = document.getElementById('message');
+      msg.style.display = 'block';
+      msg.textContent = "Okay… but I still think you’re pretty amazing ❤️";
+    }
+  </script>
+</body>
+</html>
